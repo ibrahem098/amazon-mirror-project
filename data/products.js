@@ -655,5 +655,35 @@ const products = [{
       "apparel",
       "mens"
     ]
+  },
+  {
+    id: "id1",
+    image: "images/products/backpack.jpg",
+    name: "backpack",
+    rating: {
+      stars: 4,
+      count: 435
+    },
+    priceCents: 2799,
+    keywords: [
+      "kitchen",
+      "kitchen towels",
+      "tissues"
+    ]
+  },
+  {
+    id: "id2",
+    image: "images/products/umbrella.jpg",
+    name: "umbrella - green",
+    rating: {
+      stars: 5,
+      count: 45
+    },
+    priceCents: 799,
+    keywords: [
+      "kitchen",
+      "kitchen towels",
+      "tissues"
+    ]
   }
 ];
