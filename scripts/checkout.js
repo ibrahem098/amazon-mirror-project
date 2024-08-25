@@ -1,5 +1,7 @@
 import {
-    cart
+    cart,
+    removeFromCart,
+    upadteCartQuantity
 } from "../data/cart.js";
 import {
     products
@@ -10,10 +12,9 @@ import {
 
 let cartSummaryHTML = '';
 let matchingproduct = ''
-import {
-    removeFromCart
-} from "../data/cart.js";
+upadteCartQuantity('.js-cartquantity');
 
+// generate HTML //
 cart.forEach((cartItem) => {
     products.forEach((product) => {
         if (cartItem.productId === product.id) {
@@ -96,7 +97,9 @@ cart.forEach((cartItem) => {
 })
 document.querySelector('.order-summary')
     .innerHTML = cartSummaryHTML;
+//////////////////////////
 
+// delete from cart //
 document.querySelectorAll('.js-delete-link')
     .forEach((link) => {
         link.addEventListener('click', () => {
@@ -105,5 +108,7 @@ document.querySelectorAll('.js-delete-link')
             const container = document.querySelector(
                 `.js-cart-item-container-${productId}`)
             container.remove()
+            upadteCartQuantity('.js-cartquantity');
         })
     })
+//////////////////////////
