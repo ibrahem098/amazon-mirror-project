@@ -9,6 +9,7 @@ import {
     formatCurrency
 } from './utils/money.js'
 
+
 // generate HTML //
 let productsHTML = '';
 products.forEach((product, index) => {
@@ -73,8 +74,8 @@ let timeoutid;
 function upadteCartQuantity(productId) {
     let addedToCartElemnt =
         document.querySelector(`.js-added-to-cart-${productId}`);
-
     let cartQuantity = 0;
+
     cart.forEach((cartItem) => {
         cartQuantity += cartItem.quantity
     })
